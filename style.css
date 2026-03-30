@@ -1,6 +1,7 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 :root {
@@ -26,6 +27,8 @@
 body {
   background: var(--bg-url) no-repeat top center/cover;
   height: 100vh;
+  width: 100%;
+  overflow-x: hidden;
 }
 
 body * {
@@ -169,13 +172,243 @@ footer {
 }
 
 /* media queries*/
-@media (min-width: 700px) {
+
+/* Celulares Pequenos (320px - 480px) */
+@media (min-width: 320px) and (max-width: 480px) {
+  #conteiner {
+    max-width: 100%;
+    margin: 32px auto 0px;
+    padding: 0 16px;
+  }
+
+  #profile {
+    padding: 16px;
+  }
+
+  #profile img {
+    width: 88px;
+    height: 88px;
+  }
+
+  #profile p {
+    font-size: 14px;
+    margin-top: 6px;
+  }
+
+  ul {
+    gap: 12px;
+    padding: 16px 0;
+  }
+
+  ul li a {
+    padding: 12px 16px;
+    font-size: 14px;
+  }
+
+  #social-links {
+    font-size: 20px;
+    gap: 8px;
+  }
+
+  #social-links a {
+    padding: 12px;
+  }
+
+  footer {
+    font-size: 12px;
+    padding: 16px 0;
+  }
+}
+
+/* Celulares Médios (481px - 600px) */
+@media (min-width: 481px) and (max-width: 600px) {
+  #conteiner {
+    max-width: 100%;
+    margin: 40px auto 0px;
+    padding: 0 20px;
+  }
+
+  #profile img {
+    width: 100px;
+    height: 100px;
+  }
+
+  ul {
+    gap: 14px;
+    padding: 20px 0;
+  }
+
+  ul li a {
+    padding: 14px 20px;
+    font-size: 15px;
+  }
+
+  #social-links {
+    font-size: 22px;
+  }
+}
+
+/* Celulares Grandes (601px - 700px) */
+@media (min-width: 601px) and (max-width: 700px) {
+  :root {
+    --bg-url: url(./assets/bg-mobile.jpg);
+  }
+
+  .light {
+    --bg-url: url(./assets/bg-mobile-light.jpg);
+  }
+
+  #conteiner {
+    max-width: 100%;
+    margin: 48px auto 0px;
+    padding: 0 24px;
+  }
+
+  #profile img {
+    width: 110px;
+    height: 110px;
+  }
+
+  ul li a {
+    font-size: 16px;
+  }
+
+  #social-links {
+    font-size: 26px;
+    gap: 12px;
+  }
+}
+
+/* Tablets Pequenos (701px - 900px) */
+@media (min-width: 701px) and (max-width: 900px) {
   :root {
     --bg-url: url(./assets/bg-desktop.jpg);
   }
 
   .light {
     --bg-url: url(./assets/bg-desktop-light.jpg);
+  }
+
+  #conteiner {
+    max-width: 600px;
+    margin: 60px auto 0px;
+    padding: 0 28px;
+  }
+
+  #profile {
+    padding: 28px;
+  }
+
+  #profile img {
+    width: 120px;
+    height: 120px;
+  }
+
+  ul {
+    gap: 18px;
+    padding: 28px 0;
+  }
+
+  ul li a {
+    padding: 18px 28px;
+    font-size: 17px;
+  }
+
+  #social-links {
+    font-size: 28px;
+    gap: 16px;
+  }
+
+  #social-links a {
+    padding: 18px;
+  }
+}
+
+/* Tablets Grandes e Desktop (901px+) */
+@media (min-width: 901px) {
+  :root {
+    --bg-url: url(./assets/bg-desktop.jpg);
+  }
+
+  .light {
+    --bg-url: url(./assets/bg-desktop-light.jpg);
+  }
+
+  #conteiner {
+    max-width: 588px;
+    margin: 56px auto 0px;
+    padding: 0 24px;
+  }
+
+  #profile {
+    padding: 24px;
+  }
+
+  #profile img {
+    width: 112px;
+    height: 118px;
+  }
+
+  ul li a {
+    font-size: 16px;
+  }
+
+  #social-links {
+    font-size: 24px;
+  }
+}
+
+/* Ultra-wide screens (1440px+) */
+@media (min-width: 1440px) {
+  body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  #conteiner {
+    max-width: 600px;
+  }
+}
+
+/* Orientação Landscape para Celulares */
+@media (max-height: 600px) and (orientation: landscape) {
+  body {
+    height: auto;
+    min-height: 100vh;
+  }
+
+  #conteiner {
+    margin: 24px auto 0px;
+  }
+
+  #profile {
+    padding: 12px;
+  }
+
+  #profile img {
+    width: 80px;
+    height: 80px;
+  }
+
+  ul {
+    gap: 8px;
+    padding: 12px 0;
+  }
+
+  ul li a {
+    padding: 8px 16px;
+    font-size: 14px;
+  }
+
+  #social-links {
+    font-size: 20px;
+    padding: 12px 0;
+  }
+
+  footer {
+    padding: 12px 0;
+    font-size: 12px;
   }
 }
 
