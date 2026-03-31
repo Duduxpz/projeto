@@ -24,9 +24,14 @@
   --switch-bg-url: url(./assets/sun.svg);
 }
 
+html,
+body {
+  height: 100%;
+}
+
 body {
   background: var(--bg-url) no-repeat top center/cover;
-  height: 100vh;
+  min-height: 100vh;
   width: 100%;
   overflow-x: hidden;
 }
@@ -50,8 +55,8 @@ body * {
 }
 
 #profile img {
-  width: 112px;
-  height: 118px;
+  width: 106px;
+  height: 108px;
   border-radius: 50%;
 }
 
@@ -182,14 +187,7 @@ footer {
   }
 
   #profile {
-    position: absolute;
-    inset: 4px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
-    z-index: 2;
+    padding: 16px;
   }
 
   #profile img {
